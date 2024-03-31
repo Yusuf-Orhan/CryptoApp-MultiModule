@@ -1,3 +1,6 @@
 package com.yusuforhan.cryptocurrency.core.data.dto
 
-class CryptoList : ArrayList<CryptoListItem>()
+data class CryptoList(
+    val data : List<CryptoItem>,
+    val info: İnfo
+)

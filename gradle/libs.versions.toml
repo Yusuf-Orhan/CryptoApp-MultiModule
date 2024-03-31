@@ -56,4 +56,5 @@ androidLibrary = { id = "com.android.library", version.ref = "agp" }
 androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp" }
 jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+hiltPlugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.yusuforhan.cryptocurrency.core"
+    namespace = "com.yusuforhan.cryptocurrency.core.domain"
     compileSdk = 34
 
     defaultConfig {

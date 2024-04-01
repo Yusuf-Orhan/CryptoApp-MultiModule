@@ -47,4 +47,5 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.gson.converter)
     implementation(libs.gson)
+    implementation(project(":core:domain"))
 }

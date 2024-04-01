@@ -23,4 +23,4 @@ rootProject.name = "Crypto Currency"
 include(":app")
 include(":core")
 include(":core:data")
-include(":core:mylibrary")
+include(":core:domain")

@@ -1,4 +1,4 @@
-package com.yusuforhan.cryptocurrency.core.domain
+package com.yusuforhan.cryptyocurrency.core.domain
 
 import org.junit.Test
 

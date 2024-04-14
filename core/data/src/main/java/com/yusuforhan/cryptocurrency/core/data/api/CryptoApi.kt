@@ -8,7 +8,7 @@ import retrofit2.http.Path
 interface CryptoApi {
 
     @GET("/api/tickers/")
-    suspend fun getCryptoList() : List<CryptoList>
+    suspend fun getCryptoList() : CryptoList
 
     @GET("/api/ticker/{ID}")
     suspend fun getCryptoItem(@Path("ID")id : Int) : CryptoItem

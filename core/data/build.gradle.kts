@@ -39,7 +39,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(project(":core:common"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -49,4 +48,5 @@ dependencies {
     implementation(libs.gson.converter)
     implementation(libs.gson)
     implementation(project(":core:domain"))
+    implementation(project(":core:common"))
 }

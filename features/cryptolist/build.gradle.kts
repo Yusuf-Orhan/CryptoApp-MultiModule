@@ -56,4 +56,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
     implementation(libs.hilt.android)
     implementation(libs.hilt.compiler)
+    implementation(project(":core:domain"))
+    implementation(project(":core:common"))
 }

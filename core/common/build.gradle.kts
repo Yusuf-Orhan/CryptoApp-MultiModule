@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.yusuforhan.cryptyocurrency.core.domain"
+    namespace = "com.yusuforhan.cryptocurrency.core.common"
     compileSdk = 34
 
     defaultConfig {
@@ -40,5 +40,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(project(":core:common"))
 }

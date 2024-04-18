@@ -1,6 +1,6 @@
 package com.yusuforhan.cryptocurrency.core.data.dto
 
 data class CryptoList(
-    val data : List<CryptoItem>,
-    val info: İnfo
+    val listdata: List<Listdata>,
+    val timestamp: Long
 )

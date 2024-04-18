@@ -15,7 +15,7 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideCryptoApi(): CryptoApi = Retrofit.Builder()
-        .baseUrl("")
+        .baseUrl("https://api.coincap.io")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(CryptoApi::class.java)

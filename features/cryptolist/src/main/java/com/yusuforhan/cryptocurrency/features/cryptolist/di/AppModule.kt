@@ -1,9 +1,11 @@
 package com.yusuforhan.cryptocurrency.features.cryptolist.di
 
 import com.yusuforhan.cryptocurrency.core.data.api.CryptoApi
+import com.yusuforhan.cryptocurrency.core.data.dto.Item
 import com.yusuforhan.cryptocurrency.core.data.mapper.CryptoDetailMapper
 import com.yusuforhan.cryptocurrency.core.data.mapper.CryptoListMapper
 import com.yusuforhan.cryptocurrency.core.data.repository.CryptoRepositoryImpl
+import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoItemEntity
 import com.yusuforhan.cryptyocurrency.core.domain.repository.CryptoRepository
 import dagger.Module
 import dagger.Provides
@@ -26,4 +28,6 @@ object NetworkModule {
         cryptoListMapper = cryptoListMapper,
         cryptoDetailMapper = cryptoDetailMapper
     )
+
+
 }

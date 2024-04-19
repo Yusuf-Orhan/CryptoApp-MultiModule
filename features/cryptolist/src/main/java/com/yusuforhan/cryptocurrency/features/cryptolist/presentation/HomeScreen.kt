@@ -13,6 +13,7 @@ import com.yusuforhan.cryptocurrency.features.cryptolist.viewmodel.HomeViewModel
 
 @Composable
 fun HomeScreen(
+    viewModel: HomeViewModel = hiltViewModel()
 ) {
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -21,7 +22,7 @@ fun HomeScreen(
     ) {
         Button(
             onClick = {
-                println("Clicked")
+                viewModel.getCryptoList()
             },
         ) {
             Text("Get Crypto List")

@@ -1,6 +1,6 @@
 package com.yusuforhan.cryptocurrency.core.data.dto
 
 data class CryptoItem(
-    val data: ItemData,
+    val data: Item,
     val timestamp: Long
 )

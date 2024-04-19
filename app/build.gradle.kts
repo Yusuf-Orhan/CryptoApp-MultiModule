@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.hiltPlugin)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -41,7 +42,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.10"
     }
     packaging {
         resources {
@@ -69,6 +70,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(project(":features:cryptolist"))
     implementation(libs.hilt.android)
-    implementation(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
 
 }

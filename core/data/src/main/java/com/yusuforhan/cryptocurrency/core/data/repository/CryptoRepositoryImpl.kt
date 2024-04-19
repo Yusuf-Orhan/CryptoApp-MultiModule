@@ -7,7 +7,6 @@ import com.yusuforhan.cryptocurrency.core.data.mapper.CryptoListMapper
 import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoDetail
 import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoItemEntity
 import com.yusuforhan.cryptyocurrency.core.domain.repository.CryptoRepository
-import java.lang.Exception
 import javax.inject.Inject
 
 class CryptoRepositoryImpl @Inject constructor(
@@ -24,7 +23,7 @@ class CryptoRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun getCryptoDetail(id: Int): Resource<CryptoDetail> {
+    override suspend fun getCryptoDetail(id: String): Resource<CryptoDetail> {
         return try {
             Resource.Loading
             Resource.Success(cryptoDetailMapper.map(api.getCryptoItem(id)))

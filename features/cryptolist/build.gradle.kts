@@ -32,6 +32,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.10"
+    }
 }
 
 dependencies {
@@ -55,9 +61,11 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
     implementation(libs.hilt.android)
-    implementation(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.navigation.compose)
     implementation(project(":core:domain"))
     implementation(project(":core:common"))
+    implementation(project(":core:data"))
+
 }

@@ -1,6 +1,6 @@
 package com.yusuforhan.cryptocurrency.core.data.dto
 
-data class ListData(
+data class Item(
     val exchangeUrl: String,
     val id: String,
     val name: String,

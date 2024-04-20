@@ -68,8 +68,11 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(project(":features:cryptolist"))
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-
+    implementation(project(":features:cryptolist"))
+    implementation(project(":core:data"))
+    implementation(project(":core:domain"))
+    implementation(libs.gson.converter)
+    implementation(libs.retrofit)
 }

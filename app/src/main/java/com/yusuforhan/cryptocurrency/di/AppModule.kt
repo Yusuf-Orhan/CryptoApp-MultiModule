@@ -3,11 +3,12 @@ package com.yusuforhan.cryptocurrency.di
 import com.yusuforhan.cryptocurrency.core.data.api.CryptoApi
 import com.yusuforhan.cryptocurrency.core.data.dto.Item
 import com.yusuforhan.cryptocurrency.core.data.mapper.CryptoDetailMapper
-import com.yusuforhan.cryptocurrency.core.data.mapper.CryptoListMapper
+import com.yusuforhan.cryptocurrency.core.data.mapper.CryptoListMapperImpl
 import com.yusuforhan.cryptocurrency.core.data.repository.CryptoRepositoryImpl
 import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoDetail
 import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoItemEntity
 import com.yusuforhan.cryptyocurrency.core.domain.mapper.CryptoBaseMapper
+import com.yusuforhan.cryptyocurrency.core.domain.mapper.CryptoListMapper
 import com.yusuforhan.cryptyocurrency.core.domain.repository.CryptoRepository
 import dagger.Module
 import dagger.Provides
@@ -22,23 +23,23 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideCryptoListMapper(): com.yusuforhan.cryptyocurrency.core.domain.mapper.CryptoListMapper<Item, CryptoItemEntity> =
-        CryptoListMapper()
+    fun provideCryptoListMapper(): CryptoListMapperImpl =
+        CryptoListMapperImpl()
 
     @Provides
     @Singleton
-    fun provideCryptDetailMapper(): CryptoBaseMapper<Item, CryptoDetail> = CryptoDetailMapper()
+    fun provideCryptDetailMapper(): CryptoDetailMapper = CryptoDetailMapper()
 
     @Provides
     @Singleton
     fun provideCryptoRepository(
         api: CryptoApi,
-        cryptoListMapper: CryptoListMapper,
+        cryptoListMapperImpl: CryptoListMapperImpl,
         cryptoDetailMapper: CryptoDetailMapper
 
     ): CryptoRepository = CryptoRepositoryImpl(
         api = api,
-        cryptoListMapper = cryptoListMapper,
+        cryptoListMapperImpl = cryptoListMapperImpl,
         cryptoDetailMapper = cryptoDetailMapper
     )
 

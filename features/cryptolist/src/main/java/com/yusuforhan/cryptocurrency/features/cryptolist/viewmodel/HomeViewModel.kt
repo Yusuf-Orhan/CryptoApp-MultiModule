@@ -16,7 +16,7 @@ class HomeViewModel @Inject constructor(
         val resource = repository.getCryptoList()
         when(resource) {
             is Resource.Success -> println("Success")
-            is Resource.Error -> println("Error")
+            is Resource.Error -> println("Error : ${resource.message}")
             is Resource.Loading -> println("Loading")
         }
     }

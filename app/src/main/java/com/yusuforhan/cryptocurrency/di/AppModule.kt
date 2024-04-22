@@ -1,14 +1,9 @@
 package com.yusuforhan.cryptocurrency.di
 
 import com.yusuforhan.cryptocurrency.core.data.api.CryptoApi
-import com.yusuforhan.cryptocurrency.core.data.dto.Item
 import com.yusuforhan.cryptocurrency.core.data.mapper.CryptoDetailMapper
 import com.yusuforhan.cryptocurrency.core.data.mapper.CryptoListMapperImpl
 import com.yusuforhan.cryptocurrency.core.data.repository.CryptoRepositoryImpl
-import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoDetail
-import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoItemEntity
-import com.yusuforhan.cryptyocurrency.core.domain.mapper.CryptoBaseMapper
-import com.yusuforhan.cryptyocurrency.core.domain.mapper.CryptoListMapper
 import com.yusuforhan.cryptyocurrency.core.domain.repository.CryptoRepository
 import dagger.Module
 import dagger.Provides

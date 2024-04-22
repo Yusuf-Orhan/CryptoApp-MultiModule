@@ -13,6 +13,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+//https://raw.githubusercontent.com/atilsamancioglu/IA32-CryptoComposeData/main/cryptolist.json
+
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
@@ -41,7 +43,7 @@ object AppModule {
     @Provides
     @Singleton
     fun provideCryptoApi(): CryptoApi = Retrofit.Builder()
-        .baseUrl("https://api.coincap.io")
+        .baseUrl("https://raw.githubusercontent.com/atilsamancioglu")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(CryptoApi::class.java)

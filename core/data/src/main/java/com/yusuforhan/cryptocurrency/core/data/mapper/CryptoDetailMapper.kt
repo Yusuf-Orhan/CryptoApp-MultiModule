@@ -4,13 +4,12 @@ import com.yusuforhan.cryptocurrency.core.data.dto.Item
 import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoDetail
 import com.yusuforhan.cryptyocurrency.core.domain.mapper.CryptoBaseMapper
 
-class CryptoDetailMapper : CryptoBaseMapper<Item,CryptoDetail> {
+class CryptoDetailMapper : CryptoBaseMapper<Item, CryptoDetail> {
     override fun map(input: Item): CryptoDetail {
         return CryptoDetail(
             input.id,
             input.name,
-            input.rank,
-            input.volumeUsd
+            input.logo_url
         )
     }
 }

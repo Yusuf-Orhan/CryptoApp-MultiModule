@@ -7,10 +7,9 @@ import retrofit2.http.Path
 
 interface CryptoApi {
 
-    @GET("/v2/exchanges")
+    @GET("/IA32-CryptoComposeData/main/cryptolist.json")
     suspend fun getCryptoList() : CryptoList
-
-    @GET("/v2/exchanges/{ID}")
+    @GET("IA32-CryptoComposeData/main/crypto.json")
     suspend fun getCryptoItem(@Path("ID") id : String) : Item
 
 }

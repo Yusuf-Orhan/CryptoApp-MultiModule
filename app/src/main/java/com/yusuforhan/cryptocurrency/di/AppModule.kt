@@ -43,7 +43,7 @@ object AppModule {
     @Provides
     @Singleton
     fun provideCryptoApi(): CryptoApi = Retrofit.Builder()
-        .baseUrl("https://raw.githubusercontent.com/atilsamancioglu")
+        .baseUrl("https://raw.githubusercontent.com/atilsamancioglu/IA32-CryptoComposeData/main/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(CryptoApi::class.java)

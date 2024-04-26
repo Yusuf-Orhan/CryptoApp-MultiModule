@@ -13,12 +13,11 @@ class HomeViewModel @Inject constructor(
     private val repository : CryptoRepository
 ) : ViewModel() {
     fun getCryptoList() = viewModelScope.launch {
-        val resource = repository.getCryptoList()
-        when(resource) {
+        when(val resource = repository.getCryptoList()) {
             is Resource.Success -> {
                 resource.data.forEach {
-                    println(it.name)
-                    println(it.price)
+                    println("Currency : ${it.currency}")
+                    println("Price : ${it.price}")
                 }
             }
             is Resource.Error -> println("Error : ${resource.message}")

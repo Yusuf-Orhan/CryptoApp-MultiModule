@@ -19,7 +19,7 @@ class HomeViewModel @Inject constructor(
     init {
         getCryptoList()
     }
-    private fun getCryptoList() = viewModelScope.launch {
+    fun getCryptoList() = viewModelScope.launch {
         when (val resource = repository.getCryptoList()) {
             is Resource.Success -> {
                 state.value = state.value.copy(isLoading = false, error = null, cryptoList = resource.data)

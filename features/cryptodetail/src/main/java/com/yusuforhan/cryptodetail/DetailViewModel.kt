@@ -15,7 +15,10 @@ class DetailViewModel @Inject constructor(
     private val repository: CryptoRepository
 ): ViewModel() {
     val state = MutableStateFlow(DetailState())
-    fun getCryptoDetail() = viewModelScope.launch {
+    init {
+        getCryptoDetail()
+    }
+    private fun getCryptoDetail() = viewModelScope.launch {
         when(val result = repository.getCryptoDetail()) {
             is Resource.Loading -> state.value = state.value.copy(isLoading = true)
             is Resource.Success -> state.value = state.value.copy(data = result.data)

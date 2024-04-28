@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun DetailRoute() {
-    DetailRoute()
+    DetailScreen()
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

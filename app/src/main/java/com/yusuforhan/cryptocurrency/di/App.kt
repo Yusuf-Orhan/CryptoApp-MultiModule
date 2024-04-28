@@ -1,4 +1,4 @@
-package com.yusuforhan.cryptocurrency
+package com.yusuforhan.cryptocurrency.di
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

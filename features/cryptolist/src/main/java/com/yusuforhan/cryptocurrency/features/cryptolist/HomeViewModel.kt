@@ -7,17 +7,17 @@ import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoItemEntity
 import com.yusuforhan.cryptyocurrency.core.domain.repository.CryptoRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.lastOrNull
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val repository: CryptoRepository
 ) : ViewModel() {
-    val state = MutableStateFlow(HomeState(null, null, null))
+    private val _state = MutableStateFlow(HomeState(null, null, null))
+    val state : StateFlow<HomeState> = _state
 
     init {
         getCryptoList()
@@ -26,14 +26,14 @@ class HomeViewModel @Inject constructor(
         repository.getCryptoList().onEach { result ->
             when (result) {
                 is Resource.Success -> {
-                    state.value =
+                    _state.value =
                         state.value.copy(isLoading = false, error = null, cryptoList = result.data)
                 }
-                is Resource.Error -> state.value =
+                is Resource.Error -> _state.value =
                     state.value.copy(isLoading = false, error = result.message, cryptoList = null)
 
-                is Resource.Loading -> state.value =
-                    state.value.copy(isLoading = true, error = null, cryptoList = null)
+                is Resource.Loading -> _state.value =
+                    state.value.copy  (isLoading = true, error = null, cryptoList = null)
             }
         }.launchIn(viewModelScope)
     }

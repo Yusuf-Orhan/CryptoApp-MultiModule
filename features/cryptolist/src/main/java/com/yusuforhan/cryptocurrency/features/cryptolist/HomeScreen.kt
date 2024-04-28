@@ -25,8 +25,19 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoItemEntity
 
 @Composable
+fun HomeRoute(
+    viewModel : HomeViewModel = hiltViewModel(),
+    navigateToDetail : (String) -> Unit
+) {
+    HomeScreen(
+        viewModel = viewModel,
+        onItemClick = navigateToDetail
+    )
+}
+@Composable
 fun HomeScreen(
-    viewModel: HomeViewModel = hiltViewModel()
+    viewModel: HomeViewModel,
+    onItemClick : (String) -> Unit
 ) {
     val state = viewModel.state.collectAsState().value
     Column(

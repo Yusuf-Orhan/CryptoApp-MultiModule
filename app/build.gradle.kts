@@ -75,4 +75,5 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(libs.gson.converter)
     implementation(libs.retrofit)
+    implementation(libs.androidx.navigation.compose)
 }

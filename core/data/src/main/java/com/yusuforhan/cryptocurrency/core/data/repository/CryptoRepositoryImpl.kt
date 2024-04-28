@@ -7,6 +7,8 @@ import com.yusuforhan.cryptocurrency.core.data.mapper.CryptoListMapperImpl
 import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoDetail
 import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoItemEntity
 import com.yusuforhan.cryptyocurrency.core.domain.repository.CryptoRepository
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class CryptoRepositoryImpl @Inject constructor(
@@ -14,12 +16,12 @@ class CryptoRepositoryImpl @Inject constructor(
     private val cryptoListMapperImpl: CryptoListMapperImpl,
     private val cryptoDetailMapper: CryptoDetailMapper
 ) : CryptoRepository {
-    override suspend fun getCryptoList(): Resource<List<CryptoItemEntity>> {
-        return try {
-            Resource.Loading
-            Resource.Success(cryptoListMapperImpl.map(api.getCryptoList()))
+    override fun getCryptoList(): Flow<Resource<List<CryptoItemEntity>>> = flow {
+        try {
+            emit(Resource.Loading)
+            emit(Resource.Success(cryptoListMapperImpl.map(api.getCryptoList())))
         } catch (e: Exception) {
-            Resource.Error(e.message.orEmpty())
+            emit(Resource.Error(e.message.orEmpty()))
         }
     }
 

@@ -10,6 +10,6 @@ interface CryptoApi {
     @GET("cryptolist.json")
     suspend fun getCryptoList() : List<CryptoItem>
     @GET("crypto.json")
-    suspend fun getCryptoItem(@Path("ID") id : String) : Item
+    suspend fun getCryptoItem() : Item
 
 }

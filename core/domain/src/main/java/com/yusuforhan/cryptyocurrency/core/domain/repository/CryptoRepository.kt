@@ -9,5 +9,5 @@ interface CryptoRepository {
 
     fun getCryptoList() : Flow<Resource<List<CryptoItemEntity>>>
 
-    suspend fun getCryptoDetail(id : String) : Resource<CryptoDetail>
+    suspend fun getCryptoDetail() : Resource<CryptoDetail>
 }

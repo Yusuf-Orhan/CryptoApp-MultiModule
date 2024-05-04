@@ -1,4 +1,4 @@
-package com.yusuforhan.cryptodetail
+package com.yusuforhan.cryptocurrency.features.detail
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding

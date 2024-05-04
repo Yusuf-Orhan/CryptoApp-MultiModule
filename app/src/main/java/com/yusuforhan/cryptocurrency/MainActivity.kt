@@ -7,7 +7,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.navigation.compose.rememberNavController
 import com.yusuforhan.cryptocurrency.features.cryptolist.HomeScreen
+import com.yusuforhan.cryptocurrency.navigation.AppNavHost
 import com.yusuforhan.cryptocurrency.ui.theme.CryptoCurrencyTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,7 +23,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HomeScreen()
+                    val navController = rememberNavController()
+                    AppNavHost(navController = navController)
                 }
             }
         }

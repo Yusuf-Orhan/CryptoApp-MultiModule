@@ -1,4 +1,4 @@
-package com.yusuforhan.cryptodetail
+package com.yusuforhan.cryptocurrency.features.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

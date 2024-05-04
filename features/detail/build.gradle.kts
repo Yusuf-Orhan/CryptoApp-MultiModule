@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.yusuforhan.cryptodetail"
+    namespace = "com.yusuforhan.cryptocurrency.features.detail"
     compileSdk = 34
 
     defaultConfig {

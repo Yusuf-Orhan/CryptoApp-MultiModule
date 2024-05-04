@@ -71,6 +71,7 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(project(":features:cryptolist"))
+    implementation(project(":features:detail"))
     implementation(project(":core:data"))
     implementation(project(":core:domain"))
     implementation(libs.gson.converter)

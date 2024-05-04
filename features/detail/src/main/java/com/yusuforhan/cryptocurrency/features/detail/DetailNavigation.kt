@@ -1,4 +1,4 @@
-package com.yusuforhan.cryptodetail
+package com.yusuforhan.cryptocurrency.features.detail
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
@@ -11,7 +11,7 @@ import androidx.navigation.navArgument
 const val detailRoute = "detail_route"
 const val detailArgumentKey = "crypto_name"
 fun NavGraphBuilder.detailScreen(
-    navigateToDetail: (String) -> Unit
+    navigateToHome: () -> Unit
 ) {
     composable(
         route = detailRoute,

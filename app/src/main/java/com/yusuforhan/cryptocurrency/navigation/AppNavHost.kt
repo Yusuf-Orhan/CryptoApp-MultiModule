@@ -6,6 +6,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import com.yusuforhan.cryptocurrency.features.cryptolist.homeRoute
 import com.yusuforhan.cryptocurrency.features.cryptolist.homeScreen
+import com.yusuforhan.cryptocurrency.features.cryptolist.navigateToHome
+import com.yusuforhan.cryptocurrency.features.detail.detailScreen
+import com.yusuforhan.cryptocurrency.features.detail.navigateToDetail
 
 @Composable
 fun AppNavHost(
@@ -14,7 +17,10 @@ fun AppNavHost(
 ) {
     NavHost(navController = navController, startDestination = homeRoute) {
         homeScreen(
-            navigateToDetail = {navController.navigate("detail")}
+            navigateToDetail = { navController.navigateToDetail(it) }
+        )
+        detailScreen(
+            navigateToHome = { navController.navigateToHome() }
         )
     }
 }

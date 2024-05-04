@@ -1,4 +1,4 @@
-package com.yusuforhan.cryptodetail
+package com.yusuforhan.cryptocurrency.features.detail
 
 import org.junit.Test
 

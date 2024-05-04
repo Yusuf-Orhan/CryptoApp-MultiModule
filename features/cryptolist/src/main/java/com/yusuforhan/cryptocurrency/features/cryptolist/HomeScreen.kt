@@ -59,7 +59,7 @@ fun HomeScreen(
                     .background(color = Color.Blue)
             ) {
                 items(state.cryptoList) {
-                    CryptoListItem(item = it)
+                    CryptoListItem(item = it,onItemClick = onItemClick)
                 }
             }
         }
@@ -69,13 +69,14 @@ fun HomeScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CryptoListItem(
-    item: CryptoItemEntity
+    item: CryptoItemEntity,
+    onItemClick: (String) -> Unit
 ) {
     Card(
         modifier = Modifier
             .padding(8.dp)
             .fillMaxSize(),
-        onClick = {},
+        onClick = { item.currency?.let { onItemClick(it) } },
         shape = RoundedCornerShape(8.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color.Magenta,

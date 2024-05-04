@@ -1,4 +1,4 @@
-package com.yusuforhan.cryptocurrency.features.detail
+package com.yusuforhan.features.cryptodetail
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.yusuforhan.cryptocurrency.features.detail.test", appContext.packageName)
+        assertEquals("com.yusuforhan.features.cryptodetail.test", appContext.packageName)
     }
 }

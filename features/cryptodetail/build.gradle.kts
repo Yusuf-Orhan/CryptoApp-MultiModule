@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.yusuforhan.cryptocurrency.features.detail"
+    namespace = "com.yusuforhan.cryptocurrency.features.cryptolist"
     compileSdk = 34
 
     defaultConfig {
@@ -31,6 +31,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.10"
     }
 }
 

@@ -1,4 +1,4 @@
-package com.yusuforhan.cryptocurrency.features.detail
+package com.yusuforhan.features.cryptodetail
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
@@ -14,7 +14,7 @@ fun NavGraphBuilder.detailScreen(
     navigateToHome: () -> Unit
 ) {
     composable(
-        route = detailRoute,
+        route = detailRoute.plus("/{$detailArgumentKey}"),
         arguments = listOf(
             navArgument(detailArgumentKey, builder = { NavType.StringType })
         )

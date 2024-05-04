@@ -15,8 +15,8 @@
             <option value="$PROJECT_DIR$/core/data" />
             <option value="$PROJECT_DIR$/core/domain" />
             <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/cryptodetail" />
             <option value="$PROJECT_DIR$/features/cryptolist" />
-            <option value="$PROJECT_DIR$/features/detail" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

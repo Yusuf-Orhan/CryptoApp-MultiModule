@@ -1,6 +1,5 @@
 package com.yusuforhan.cryptocurrency.features.cryptolist
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -56,7 +55,6 @@ fun HomeScreen(
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(color = Color.Blue)
             ) {
                 items(state.cryptoList) {
                     CryptoListItem(item = it,onItemClick = onItemClick)
@@ -79,12 +77,12 @@ fun CryptoListItem(
         onClick = { item.currency?.let { onItemClick(it) } },
         shape = RoundedCornerShape(8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color.Magenta,
+            containerColor = Color(0xFFABA7F9),
             contentColor = Color.White
         )
     ) {
         Column(
-            modifier = Modifier.padding(6.dp)
+            modifier = Modifier.padding(8.dp)
         ) {
             Text(text = item.currency!!, fontSize = 18.sp)
             Text(text = item.price!!)

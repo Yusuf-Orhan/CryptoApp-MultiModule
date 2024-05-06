@@ -19,7 +19,7 @@ fun NavGraphBuilder.detailScreen(
             navArgument(detailArgumentKey, builder = { NavType.StringType })
         )
     ) {
-        DetailRoute()
+        DetailRoute(it.arguments?.getString(detailArgumentKey).toString())
     }
 }
 

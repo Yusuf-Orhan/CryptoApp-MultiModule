@@ -28,7 +28,7 @@ class CryptoRepositoryImpl @Inject constructor(
     override suspend fun getCryptoDetail(): Resource<CryptoDetail> {
         return try {
             Resource.Loading
-            Resource.Success(cryptoDetailMapper.map(api.getCryptoItem()))
+            Resource.Success(cryptoDetailMapper.map(api.getCryptoItem()[0]))
         } catch (e: Exception) {
             Resource.Error(e.message.orEmpty())
         }

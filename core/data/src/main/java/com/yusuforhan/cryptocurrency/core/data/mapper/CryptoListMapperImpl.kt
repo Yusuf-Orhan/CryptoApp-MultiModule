@@ -1,7 +1,6 @@
 package com.yusuforhan.cryptocurrency.core.data.mapper
 
 import com.yusuforhan.cryptocurrency.core.data.dto.CryptoItem
-import com.yusuforhan.cryptocurrency.core.data.dto.Item
 import com.yusuforhan.cryptyocurrency.core.domain.entity.CryptoItemEntity
 import com.yusuforhan.cryptyocurrency.core.domain.mapper.CryptoListMapper
 
